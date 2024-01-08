@@ -1,0 +1,40 @@
+.btn  {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-meduim {
+    padding: 16px 23px;
+    font-size: 18px;
+}
+
+.btn-outline {
+    outline: 2px solid #fff;
+    background-color: transparent;
+    transition: all 0.2s ease-out;
+    
+}
+
+.btn-large {
+    padding: 24px 40px;
+    font-size: 22px;
+}
+
+.btn-primary {
+    background-color: #242424;
+
+}
+
+
+
+.btn-primary:hover,
+.btn-outline:hover {
+    background-color: #fff;
+    color: #242424;
+}
+
+
+
+

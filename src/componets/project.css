@@ -1,0 +1,159 @@
+section {
+    background-color: #121211;
+    padding: 3em 4em;
+    color: #fff;
+}
+
+.containor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text-aria {
+    width: 60%;
+    text-align: center;
+    
+}
+.text-aria, 
+.text-aria h2,
+.tab-containor {
+    margin-bottom: 25px;
+}
+
+.text-aria h2 {
+    font-size: 32px;
+    
+}
+
+.tab-containor {
+    display: flex;
+    width: 60%;
+}
+
+.tab-containor > div {
+    position: relative;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+
+.tab1::after, 
+.tab2::after,
+.tab3::after {
+    content: attr(data-category);
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(170, 54, 124, 0.5)  5%, rgba(74, 47, 189, 0.5));
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tab1.active::after, 
+.tab2.active::after,
+.tab3.active::after {
+    left: 0%;
+    transition: all 0.3s ease-out;
+}
+
+.tab-containor .tab3 {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.tab-containor .tab1 {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.project-containor {
+    background-color: transparent;
+    display: none;
+
+
+}
+
+.project-containor.p-active {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    grid-gap: 10px;
+    margin-top: 30px;
+   
+}
+
+.project {
+    position: relative;
+    object-fit: cover;
+    border-radius: 22px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.project::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(170, 54, 124, 0.5)  5%, rgba(74, 47, 189, 0.5));
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+
+.project:hover::after {
+    top: 0%;
+}
+
+
+.pro-tab2.p-active,
+.pro-tab3.p-active {
+    display: block;
+    margin-top: 50px;
+    width: 60%;
+    text-align: center;
+    animation: anim 0.5s ease-out 1 forwards;
+}
+
+.pro-tab2,
+.pro-tab3 {
+    display: none;
+}
+
+
+
+@keyframes anim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+    
+}
+

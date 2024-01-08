@@ -1,0 +1,134 @@
+.content-form {
+    width: 100%;
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(90deg ,rgba(170, 54, 124, 0.5)  5%, rgba(74, 47, 189, 0.5));
+    color: #fff;
+    justify-content: space-evenly;
+    
+}
+
+
+.form-containor h2 {
+    font-size: 2.2em;
+}
+
+.form-containor {
+    width: 50%;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-gap: 10px;
+}
+
+form input,
+form textarea {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+
+
+.wraper-img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.wraper-img img {
+    width: 100%;
+}
+
+
+form textarea {
+    grid-column-start: span 2;
+     resize: none;
+}
+
+form button {
+    width: 100px;
+    padding: 10px;
+}
+
+.form-containor.active-f {
+    animation: opac 1s ease-out 1s  1 forwards;
+}
+
+@keyframes opac {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.wraper-img.active-f {
+    animation: size 1s ease-out 1 forwards;
+}
+
+.subscribe-containor {
+    position: absolute;
+    width: 60vw;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    left: 20%;
+    transform: translateY(-60px);
+    border-radius: 20px;
+}
+
+.text-sub {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-sub h5 {
+    font-size: 1.1em;
+}
+
+.subscribe-containor form {
+    width: 60%;
+}
+
+.subscribe-containor form .email-s{
+    border: 1px solid ;
+    border-bottom-color: rgba(74, 47, 189, 0.5);
+    border-left-color: rgba(170, 54, 124, 0.5);
+    border-right-color: rgba(170, 54, 124, 0.5);
+    border-top-color: rgba(74, 47, 189, 0.5);
+    width: 90%;
+}
+
+.subscribe-containor form .button-s{
+    position: absolute;
+    background: linear-gradient(90deg ,rgba(170, 54, 124, 1)  5%, rgba(74, 47, 189, 1));
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    transform: translate(-100%, 1px);
+    color: #fff;
+    cursor: pointer;
+
+    
+}
+
+@keyframes size {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

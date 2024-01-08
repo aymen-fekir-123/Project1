@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    color: #fff;
+}
+
+/* rgba(170, 54, 124, 0.5)  5%, rgba(74, 47, 189, 0.5) */
+
+
+
+
+.header-containor {
+    width: 100%;
+    height: 100%;
+    padding: 200px 40px 100px ;
+    background-image: url('../assets/img/banner-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.disc-section {
+    width: 50%;
+}
+
+.disc-section .btn-large.btn-primary {
+    background: linear-gradient(rgba(170, 54, 124, 0.5)  5%, rgba(74, 47, 189, 0.5));
+   
+} 
+
+.disc-section .btn-large {
+    padding: 20px 24px;
+
+}
+
+.btn-outline {
+    border: none;
+    outline: none;
+}
+
+.brand-imag {
+    object-fit: cover;
+    display: flex;
+    animation: imganime 1s linear infinite alternate;
+}
+
+
+.animation-text .static-text {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px 0px;
+
+    
+}
+
+
+
+.animation-text .dy {
+    position: relative;
+}
+ 
+.animation-text .dy::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #fff;
+    background: url('../assets/img/banner-bg.png') no-repeat center;
+    object-fit: cover;
+    left: 100%;
+    top: 0;
+    animation: typeanime 3s steps(10) 1s infinite alternate;
+
+} 
+
+
+
+@keyframes imganime {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}

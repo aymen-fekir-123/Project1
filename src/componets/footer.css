@@ -1,0 +1,65 @@
+.footer-containor {
+    background: url('../assets/img/footer-bg.png') no-repeat;
+    background-size: 100%;
+    object-fit: cover;
+    color: #fff;
+    height: 40vh;
+    width: 100%;
+    padding: 25px;
+}
+
+.f-logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+
+.footer-icon ,
+.footer-containor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.footer-icon {
+    width: 15%;
+}
+
+
+.footer-icon a {
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.footer-icon a img {
+    width: 40%;
+    transition: all 0.3s ease-out;
+}
+
+.footer-icon a::before {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.3s ease-out;
+
+}
+
+.footer-icon a:hover::before {
+    transform: scale(1);
+}
+
+.footer-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
